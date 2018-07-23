@@ -8,3 +8,9 @@ print ('\n')
 
 
 input()     #Left this here to make the file 'Clickable'
+
+
+#for line in fileinput.input(sys.argv[1:]):
+#   x = re.sub(r'\.', '[.]', line)
+#  print (x)
+
