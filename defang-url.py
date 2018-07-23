@@ -7,7 +7,7 @@ print (replaced)
 print ('\n')
 
 
-input()     #Left this here to make the file 'Clickable'
+input()    
 
 
 #for line in fileinput.input(sys.argv[1:]):
