@@ -1,2 +1,2 @@
 To Do:
-  [] iterate over y properly
+  [x] iterate over y properly
