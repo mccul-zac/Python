@@ -1,2 +1,3 @@
 To Do:
-  * iterate over y properly
+  [x] Fix loop
+  [ ] Create dict where key='ioc' and value=[logs]
