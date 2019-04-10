@@ -1,3 +1,4 @@
 To Do:
  - [x] Fix loop
- - [ ] Create dict where key='ioc' and value=[logs]
+ - [ ] Fix format
+    - [ ] Create dict where key='ioc' and value=[logs]
