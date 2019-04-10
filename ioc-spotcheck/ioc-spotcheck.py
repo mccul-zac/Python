@@ -1,15 +1,10 @@
-path = r'test-logs.txt'
-iocPath = r'test-iocs.txt'
-iocPathLine = open(iocPath).readlines()
-x = 0
-y = 0
-spot = iocPathLine[y]
+logs = r'logs.txt'                          #full path to logs
+iocs = r'iocs.txt'                          #full path to iocs
+logs = open(logs).readlines()
+iocs = open(iocs).readlines()
 
-while x < 5:
-    for line in open(path):
-        if spot in line:
-            print (line)
-            x += 1
-            y += 1
-            print (x)
-            print (y)
+for ioc in iocs:
+    for line in logs:
+        if ioc in line:
+            print (f'______________________\nIOC:\n{ioc}\nLogs:\n{line}')
+
