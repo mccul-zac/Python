@@ -1,3 +1,6 @@
+Purpose:
+ - Check if IOCs are in a log file  
+
 To Do:
  - [x] Fix loop
  - [ ] Fix format
