@@ -1,10 +1,16 @@
-logs = r'logs.txt'                          #full path to logs
-iocs = r'iocs.txt'                          #full path to iocs
+dict = {}
+
+logs = r'logs.txt'
+iocs = r'iocs.txt'
 logs = open(logs).readlines()
 iocs = open(iocs).readlines()
 
 for ioc in iocs:
+    dict[ioc] = []
+
+for ioc in dict.keys():
     for line in logs:
         if ioc in line:
-            print (f'______________________\nIOC:\n{ioc}\nLogs:\n{line}')
+            dict[ioc].append(line)
 
+print(dict)
