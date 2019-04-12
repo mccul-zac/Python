@@ -9,4 +9,4 @@ To Do:
     - [ ] Create new file rather than store in mem
     - [ ] remove keys with no value (empty list)
  - [ ] Create a dedup
-    - [ ] remove iocs with repeating sequence of chars
+    - [ ] crop/remove iocs with repeating sequence of chars
