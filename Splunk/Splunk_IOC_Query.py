@@ -1,15 +1,8 @@
 # Take IOC list (input OR file) and spit out a Splunk query
 # Should include option to apply additional fields
 
-blah = []
-
-for ioc in list:
-  blah.append(f"{ioc} OR ") 
-
-here = "".join(blah)
-
-print(f"index=* AND ({here})")
-
-
-
+with open(r"ioc.txt") as file:                        # requires full path to file
+    ph = ' OR '.join(line.rstrip() for line in file)
+    refang = ph.replace('[.]', '.')
+    print(f'index=* AND ({refang})')
 
