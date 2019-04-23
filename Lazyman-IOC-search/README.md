@@ -1,5 +1,5 @@
 Purpose:
- - Turn mixed IOCs into Netwitness/Splunk queries  
+ - Turn file containing mixed IOCs into Netwitness/Splunk queries  
 
 To Do:
  - [ ] Add Splunk usage
