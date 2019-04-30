@@ -1,3 +1,5 @@
+# Authors: Ben G. & Zach M.
+# 4/20/2019
 # refang assumes syntax for fang is (badsite[.]com)
 # There is a TLD lib but this assumes you are unable to install it
 
