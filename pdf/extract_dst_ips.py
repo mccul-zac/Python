@@ -1,5 +1,7 @@
 # Dom E. & Zach M.
 # 4/26/2019
+# run strings on PDF file and search txt for the following:
+
 
 import re, sys
 
