@@ -1,7 +1,7 @@
 import re, sys
 
 pdfFileObjx = open('pdfStrings.txt', 'rb').read()
-pdfFileObj = pdfFileObjx.decode('utf-16')
+pdfFileObj = pdfFileObjx.decode('ASCII')
 
 newList = []
 finalDstIPList = []
