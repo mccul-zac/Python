@@ -2,7 +2,7 @@ Purpose:
  - Turn file containing mixed IOCs into Netwitness/Splunk queries  
 
 FYI:
- - Refang assumes syntax for fang is (badsite[.]com)
+ - Refang assumes syntax for defang is (badsite[.]com)
  - There is a TLD lib but this assumes you are unable to install it
 
 To Do:
