@@ -1,17 +1,13 @@
 # Authors: Ben G. & Zach M.
 # 4/20/2019
-# refang assumes syntax for fang is (badsite[.]com)
-# There is a TLD lib but this assumes you are unable to install it
-# Some issues currently present with curled TLD list, recommend saving file locally and remove title line
 
-
-import os,re
+import os,re,subprocess,time
 
 fileName = 'ioc.txt'
 #fileName = input('File Path: ')
 
 domainList = []
-finalEmailList = []
+finalEmailList = set()
 finalDomainList = []
 MD5List = []
 SHA1List = []
@@ -20,6 +16,7 @@ fullList = []
 remainingList = []
 
 '''
+#linux env
 def curlTLD():
   if os.path.isfile('./tld.txt') == False:
     cmd = "curl -o tld.txt http://data.iana.org/TLD/tlds-alpha-by-domain.txt"
@@ -30,6 +27,19 @@ def curlTLD():
         fout.writelines(data[1:])
 curlTLD()
 '''
+
+#Windows env
+def curlTLD():
+    if os.path.isfile('./tld.txt') == False:
+        pro = subprocess.Popen(['powershell', '$tld = curl http://data.iana.org/TLD/tlds-alpha-by-domain.txt | Select-Object -Expand Content;$tld.split() | Out-File -Encoding ASCII tld.txt'])
+        time.sleep(2.0)
+        pro.kill()
+        with open('tld.txt', 'r') as fin:
+            data = fin.read().splitlines(True)
+            with open('tld.txt', 'w') as fout:
+                fout.writelines(data[12:])
+curlTLD()
+
 
 def removeNewline(myList):
   betterList = []
@@ -52,11 +62,12 @@ def hash_format_search(iocList):
   ph = ' || checksum = \"'.join(line.rstrip()+"\"" for line in iocList)
   print(f'checksum = \"{ph}')
 
-'''
+
+#Needs RSA metakey for email
 def email_format_search(iocList):
-  ph = ' || filename = \"'.join(line.rstrip()+"\"" for line in iocList)
-  print(f'filename = \"{ph}')
-'''
+  ph = ' || email.all = \"'.join(line.rstrip()+"\"" for line in iocList)
+  print(f'email.all = \"{ph}')
+
 
 def file_format_search(iocList):
   ph = ' || filename = \"'.join(line.rstrip()+"\"" for line in iocList)
@@ -85,7 +96,7 @@ for var in qqq: ###my TLD list loop
 bigDomainList = removeNewline(domainList)
 for r in bigDomainList:
   if '@' in r:
-    finalEmailList.append(r)
+    finalEmailList.add(r)
   else:
     finalDomainList.append(r)
 
@@ -120,6 +131,6 @@ url_format_search(finalDomainList)
 print('')
 hash_format_search(finalHashList)
 print('')
-#email_format_search(finalEmailList)
-#print('')
+email_format_search(finalEmailList)
+print('')
 file_format_search(finalRemainingList)
