@@ -10,7 +10,8 @@ FYI:
  - Uncomment/Comment curlTLD() environment as appropriate (default is windows/powershell)
  - There is a TLD lib but this assumes you are unable to install it
  - RSA metakeys may vary based on env
- - Expect script to output 2 text files (live_ioc.txt & tld.txt) 
+ - Expect script to output 4 files (live_ioc.txt, tld.txt, IOCsearchSyntax.txt, IOCsearchSyntax.zip)
+ - Option to zip the IOCsearchSyntax.txt added
  - Separate Hash lists are available for MD5, SHA1, and SHA256 (current output does not separate them) 
  - "file" output is actually the remaining IOCs that are not IP, Hash, Domain, or Email  
 
@@ -21,4 +22,4 @@ To Do:
  - [ ] ~~List[0]+ (through each list item check what type of IOC)~~
  - [x] Curl TLD list (http://data.iana.org/TLD/tlds-alpha-by-domain.txt) and save file (rather than local)
  - [ ] Explicitly differentiate files from other IOCs 
- - [ ] Turn lists to sets(to avoid dupes)
+ - [ ] Turn lists to sets (to avoid dupes)
