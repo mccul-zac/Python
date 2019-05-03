@@ -23,5 +23,5 @@ To Do:
  - [x] Curl TLD list (http://data.iana.org/TLD/tlds-alpha-by-domain.txt) and save file (rather than local)
  - [ ] Explicitly differentiate files from other IOCs 
  - [ ] Turn lists to sets (to avoid dupes)
- - [ ] Replace append to IOCsearchSyntax.txt 
+ - [ ] Replace append to IOCsearchSyntax.txt (continues to append if running script consecutively)
  - [ ] Remove null IOCs from output
