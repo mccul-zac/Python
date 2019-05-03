@@ -62,12 +62,9 @@ def hash_format_search(iocList):
   ph = ' || checksum = \"'.join(line.rstrip()+"\"" for line in iocList)
   print(f'checksum = \"{ph}')
 
-
-#Needs RSA metakey for email
 def email_format_search(iocList):
   ph = ' || email.all = \"'.join(line.rstrip()+"\"" for line in iocList)
   print(f'email.all = \"{ph}')
-
 
 def file_format_search(iocList):
   ph = ' || filename = \"'.join(line.rstrip()+"\"" for line in iocList)
