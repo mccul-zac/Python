@@ -7,7 +7,6 @@ import os,re,subprocess,time,zipfile
 
 # The below functions are for printing formatted searches for RSA Netwitness and Splunk
 
-
 def removeNewline(myList):
   betterList = []
   [betterList.append(i.strip()) for i in myList]
@@ -76,7 +75,6 @@ def curlTLD():
                 data = fin.read().splitlines(True)
                 with open('tld.txt', 'w') as fout:
                     fout.writelines(data[12:])
-
 
 if __name__ == '__main__':
     '''
