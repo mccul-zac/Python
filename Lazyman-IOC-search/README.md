@@ -15,10 +15,10 @@ FYI:
  - "file" output is actually the remaining IOCs that are not IP, Hash, Domain, or Email  
 
 To Do:
- - [ ] Add Splunk usage
+ - [x] Add Splunk usage
  - [X] New list for each IOC type
  - [X] Add check to determine IOC (regex?)
  - [ ] ~~List[0]+ (through each list item check what type of IOC)~~
  - [x] Curl TLD list (http://data.iana.org/TLD/tlds-alpha-by-domain.txt) and save file (rather than local)
  - [ ] Explicitly differentiate files from other IOCs 
-
+ - [ ] Turn lists to sets(to avoid dupes)
