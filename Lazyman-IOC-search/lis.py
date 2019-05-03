@@ -55,7 +55,7 @@ def SplunkSearch(searchSyntax):
   # outputs Splunk syntax for all IOCs and appends to syntax file
     newFile = r'live_ioc.txt'
     with open(newFile, 'r') as liveIoc:
-        ph = ' '.join(line.rstrip() for line in liveIoc)
+        ph = ' OR '.join(line.rstrip() for line in liveIoc)
         print(f'index = * {ph}')
         #with open(searchSyntax, 'a') as searchSyntax:
         searchSyntax.write("\n\n"f'index = * {ph}')
