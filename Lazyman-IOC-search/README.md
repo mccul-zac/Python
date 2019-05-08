@@ -4,6 +4,7 @@ Purpose:
 Requirements:
  - Python 3
  - ioc.txt must contain only one IOC per line
+ - ioc.txt must not contain empty lines (including the EOF)
 
 FYI:
  - Refang assumes syntax for defang is similair to: badsite[.]com
