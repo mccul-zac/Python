@@ -24,5 +24,6 @@ To Do:
  - [ ] Explicitly differentiate files from other IOCs 
  - [ ] Turn lists to sets (to avoid dupes)
  - [ ] Replace append to IOCsearchSyntax.txt (continues to append if running script consecutively)
- - [ ] Remove null IOCs from output
- - [ ] Breakdown Splunk search
+ - [x] Remove null IOCs from output
+ - [ ] ~~Breakdown Splunk search~~
+ - [ ] PEP-8 format
